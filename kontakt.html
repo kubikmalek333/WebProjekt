@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt – Knihovny NPM</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100"><!-- Navbar -->
+    <header class="border-bottom bg-white sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light py-3"><a
+                    class="navbar-brand fw-bold text-dark d-flex align-items-center gap-2" href="index.html"><span
+                        class="badge bg-dark rounded-2 py-2 px-2 text-white">IT</span><span>WebProject</span></a><button
+                    class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto gap-md-2 mt-3 mt-md-0">
+                        <li class="nav-item"><a class="nav-link text-secondary" href="index.html">Přehled</a></li>
+                        <li class="nav-item"><a class="nav-link text-secondary" href="registrace.html">Registrace
+                                kurzu</a></li>
+                        <li class="nav-item"><a class="nav-link active fw-medium" href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="container my-5" style="max-width: 680px;">
+        <div class="mb-4">
+            <h1 class="h3 fw-bold mb-1">Napište nám</h1>
+            <p class="text-secondary small">Vyplňte e-mail a zprávu do editoru TinyMCE.</p>
+        </div>
+        <div class="bg-white border rounded-3 p-4 shadow-sm">
+            <form action="#" method="POST">
+                <div class="mb-3"><label for="userEmail" class="form-label fw-semibold small">E-mailová
+                        adresa</label><input type="email" class="form-control" id="userEmail"
+                        placeholder="priklad@domena.cz" required></div>
+                <div class="mb-4"><label for="wysiwygArea" class="form-label fw-semibold small">Text
+                        zprávy</label><textarea id="wysiwygArea" name="message">Zde napište svůj dotaz...</textarea>
+                </div><button type="submit" class="btn btn-dark px-4"><i
+                        class="fa-regular fa-paper-plane me-2"></i>Odeslat</button>
+            </form>
+        </div>
+    </main>
+    <footer class="bg-white border-top py-4 mt-auto">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2"
+            style="max-width: 680px;"><span class="small text-secondary">Albert Příleský • Projekt NPM</span><a
+                href="dokumentace.pdf" target="_blank"
+                class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-2"><i
+                    class="fa-regular fa-file-pdf text-danger"></i><span>Dokumentace projektu (PDF)</span></a></div>
+    </footer>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/tinymce/tinymce.min.js"></script>
+    <script>    tinymce.init({
+            selector: '#wysiwygArea',
+            license_key: 'gpl',
+            menubar: false,
+            statusbar: false,
+            plugins: 'lists link',
+            toolbar: 'bold italic underline | bullist numlist | link undo redo'
+        });
+    </script>
+</body>
+
+</html>

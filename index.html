@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knihovny NPM – Přehled</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <style>
+    body {
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+
+    .carousel-item img {
+      height: 380px;
+      object-fit: cover;
+    }
+
+    .card-clean {
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      transition: transform 0.15s ease;
+    }
+
+    .card-clean:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100"><!-- Minimalistický Navbar -->
+  <header class="border-bottom bg-white sticky-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-md navbar-light py-3"><a
+          class="navbar-brand fw-bold text-dark d-flex align-items-center gap-2" href="index.html"><span
+            class="badge bg-dark rounded-2 py-2 px-2 text-white">IT</span><span>WebProject</span></a><button
+          class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu"><span
+            class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto gap-md-2 mt-3 mt-md-0">
+            <li class="nav-item"><a class="nav-link active fw-medium" href="index.html">Přehled</a></li>
+            <li class="nav-item"><a class="nav-link text-secondary" href="registrace.html">Registrace kurzu</a></li>
+            <li class="nav-item"><a class="nav-link text-secondary" href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="container my-5" style="max-width: 900px;"><!-- Hero sekce -->
+    <div class="mb-4">
+      <h1 class="h3 fw-bold mb-1">Přehled implementace knihoven</h1>
+      <p class="text-secondary small mb-0">Projekt s využitím balíčkovacího manažeru NPM a frameworku Bootstrap.</p>
+    </div><!-- Carousel (4 obrázky) -->
+    <div id="simpleCarousel" class="carousel slide mb-5 rounded-3 overflow-hidden border shadow-sm"
+      data-bs-ride="carousel">
+      <div class="carousel-indicators"><button type="button" data-bs-target="#simpleCarousel" data-bs-slide-to="0"
+          class="active"></button><button type="button" data-bs-target="#simpleCarousel"
+          data-bs-slide-to="1"></button><button type="button" data-bs-target="#simpleCarousel"
+          data-bs-slide-to="2"></button><button type="button" data-bs-target="#simpleCarousel"
+          data-bs-slide-to="3"></button></div>
+      <div class="carousel-inner">
+        <div class="carousel-item active"><img src="https://picsum.photos/900/380?random=11" class="d-block w-100"
+            alt="Instalace balíčků">
+          <div class="carousel-caption bg-dark bg-opacity-75 rounded-2 p-2 mb-2">
+            <h6 class="mb-0 fw-semibold">1. Instalace a správa přes NPM</h6>
+          </div>
+        </div>
+        <div class="carousel-item"><img src="https://picsum.photos/900/380?random=12" class="d-block w-100"
+            alt="Bootstrap a layout">
+          <div class="carousel-caption bg-dark bg-opacity-75 rounded-2 p-2 mb-2">
+            <h6 class="mb-0 fw-semibold">2. Responzivní komponenty Bootstrap</h6>
+          </div>
+        </div>
+        <div class="carousel-item"><img src="https://picsum.photos/900/380?random=13" class="d-block w-100"
+            alt="Formulářové prvky">
+          <div class="carousel-caption bg-dark bg-opacity-75 rounded-2 p-2 mb-2">
+            <h6 class="mb-0 fw-semibold">3. Integrace Tom Select a TinyMCE</h6>
+          </div>
+        </div>
+        <div class="carousel-item"><img src="https://picsum.photos/900/380?random=14" class="d-block w-100"
+            alt="Nasazení na hosting">
+          <div class="carousel-caption bg-dark bg-opacity-75 rounded-2 p-2 mb-2">
+            <h6 class="mb-0 fw-semibold">4. Školní hosting a verzování na GitHubu</h6>
+          </div>
+        </div>
+      </div><button class="carousel-control-prev" type="button" data-bs-target="#simpleCarousel"
+        data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button><button
+        class="carousel-control-next" type="button" data-bs-target="#simpleCarousel" data-bs-slide="next"><span
+          class="carousel-control-next-icon"></span></button>
+    </div><!-- Progress Bar sekce -->
+    <div class="bg-white border rounded-3 p-4 mb-4 shadow-sm">
+      <div class="d-flex justify-content-between align-items-center mb-2"><span class="fw-semibold small">Postup plnění
+          projektu</span><span class="text-primary fw-bold small">85 %</span></div>
+      <div class="progress" style="height: 8px;">
+        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;"></div>
+      </div>
+      <div class="text-muted small mt-2">Komponenty i formuláře jsou zprovozněny, zbývá finální ověření odkazů na
+        serveru.</div>
+    
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

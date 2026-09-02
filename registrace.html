@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrace kurzu – Knihovny NPM</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/tom-select/dist/css/tom-select.bootstrap5.min.css">
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .ts-control {
+            border-radius: 6px !important;
+            padding: 8px 12px !important;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100"><!-- Navbar -->
+    <header class="border-bottom bg-white sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light py-3"><a
+                    class="navbar-brand fw-bold text-dark d-flex align-items-center gap-2" href="index.html"><span
+                        class="badge bg-dark rounded-2 py-2 px-2 text-white">IT</span><span>WebProject</span></a><button
+                    class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto gap-md-2 mt-3 mt-md-0">
+                        <li class="nav-item"><a class="nav-link text-secondary" href="index.html">Přehled</a></li>
+                        <li class="nav-item"><a class="nav-link active fw-medium" href="registrace.html">Registrace
+                                kurzu</a></li>
+                        <li class="nav-item"><a class="nav-link text-secondary" href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="container my-5" style="max-width: 600px;">
+        <div class="mb-4">
+            <h1 class="h3 fw-bold mb-1">Volba IT technologií</h1>
+            <p class="text-secondary small">Zvolte předměty či nástroje, o které máte v semestru zájem.</p>
+        </div>
+        <div class="bg-white border rounded-3 p-4 shadow-sm">
+            <form action="#" method="POST" id="courseForm">
+                <div class="mb-3"><label for="student" class="form-label fw-semibold small">Jméno studenta</label><input
+                        type="text" class="form-control" id="student" placeholder="např. Jan Novák" required></div>
+                <div class="mb-4"><label for="techSelect" class="form-label fw-semibold small">Požadované technologie
+                        (povinný výběr)</label><select id="techSelect" name="technologies[]" multiple required>
+                        <option value="" disabled selected>Vyberte...</option>
+                        <option value="html-css">HTML5 & CSS3 layout</option>
+                        <option value="js-es6">Moderní JavaScript (ES6+)</option>
+                        <option value="npm-composer">Správa balíčků (NPM & Composer)</option>
+                        <option value="php-backend">Základy backendu v PHP</option>
+                        <option value="git">Práce s verzováním (Git & GitHub)</option>
+                    </select>
+                    <div class="form-text mt-1 text-muted" style="font-size: 0.8rem;"> Vyberte alespoň jednu možnost
+                        kliknutím nebo psaním.
+                    </div>
+                </div><button type="submit" class="btn btn-dark w-100 py-2"> Potvrdit výběr
+                </button>
+            </form>
+        </div>
+    </main>
+    <footer class="bg-white border-top py-4 mt-auto">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2"
+            style="max-width: 600px;"><span class="small text-secondary">Albert Příleský • Projekt NPM</span><a
+                href="dokumentace.pdf" target="_blank"
+                class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-2"><i
+                    class="fa-regular fa-file-pdf text-danger"></i><span>Dokumentace projektu (PDF)</span></a></div>
+    </footer>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script>new TomSelect("#techSelect", {
+            plugins: ['remove_button'],
+            placeholder: 'Vyberte...',
+            maxOptions: 50,
+            closeAfterSelect: false
+        });
+    </script>
+</body>
+
+</html>
