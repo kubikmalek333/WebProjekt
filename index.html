@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projekt</title>
+  <title>Knihovny NPM – Přehled</title>
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
   <style>
@@ -94,11 +94,81 @@
       <div class="d-flex justify-content-between align-items-center mb-2"><span class="fw-semibold small">Postup plnění
           projektu</span><span class="text-primary fw-bold small">85 %</span></div>
       <div class="progress" style="height: 8px;">
-        <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;"></div>
+        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;"></div>
       </div>
       <div class="text-muted small mt-2">Komponenty i formuláře jsou zprovozněny, zbývá finální ověření odkazů na
         serveru.</div>
-    
+    </div><!-- Karty přehledu -->
+    <div class="row g-3 mb-5">
+      <div class="col-md-4">
+        <div class="card card-clean bg-white h-100 p-3">
+          <div class="card-body p-1"><i class="fa-solid fa-layer-group text-primary mb-2 fs-5"></i>
+            <h6 class="fw-bold mb-1">Bootstrap 5</h6>
+            <p class="text-muted small mb-0">Zajišťuje čistou responzivitu, mřížkový systém (grid) a základní styl
+              formulářů.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-clean bg-white h-100 p-3">
+          <div class="card-body p-1"><i class="fa-solid fa-list-check text-success mb-2 fs-5"></i>
+            <h6 class="fw-bold mb-1">Tom Select</h6>
+            <p class="text-muted small mb-0">Umožňuje přehledný vícenásobný výběr položek s fulltextovým vyhledáváním.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-clean bg-white h-100 p-3">
+          <div class="card-body p-1"><i class="fa-solid fa-file-pen text-dark mb-2 fs-5"></i>
+            <h6 class="fw-bold mb-1">TinyMCE</h6>
+            <p class="text-muted small mb-0">Plnohodnotný WYSIWYG editor pro snadné formátování textových zpráv.</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- Tabulka s bootstrap třídami -->
+    <div class="bg-white border rounded-3 p-4 shadow-sm">
+      <h6 class="fw-bold mb-3">Seznam zpracovaných modulů</h6>
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0 small">
+          <thead class="table-light">
+            <tr>
+              <th scope="col" class="py-2">Modul</th>
+              <th scope="col" class="py-2">Použitá knihovna</th>
+              <th scope="col" class="py-2 text-end">Stav</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fw-semibold">Základní layout & Carousel</td>
+              <td class="text-muted">Bootstrap 5.3</td>
+              <td class="text-end"><span
+                  class="badge bg-success-subtle text-success border border-success-subtle">Funkční</span></td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">Výběrový formulář</td>
+              <td class="text-muted">Tom Select 2.3</td>
+              <td class="text-end"><span
+                  class="badge bg-success-subtle text-success border border-success-subtle">Funkční</span></td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">WYSIWYG editor zprávy</td>
+              <td class="text-muted">TinyMCE 7.1</td>
+              <td class="text-end"><span
+                  class="badge bg-success-subtle text-success border border-success-subtle">Funkční</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main><!-- Patička -->
+  <footer class="bg-white border-top py-4 mt-auto">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2"
+      style="max-width: 900px;"><span class="small text-secondary">Projekt NPM</span><a
+        href="dokumentace.pdf" target="_blank"
+        class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-2"><i
+          class="fa-regular fa-file-pdf text-danger"></i><span>Dokumentace projektu (PDF)</span></a></div>
+  </footer>
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
